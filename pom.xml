@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.devzendo</groupId>
+    <artifactId>scala-dependency-version-check</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>scala-dependency-version-check</name>
+    <packaging>pom</packaging>
+    <description>Depends on our frequently-used Scala libraries, to show any
+minor version mismatches when upgrading versions in group-parent-scala.
+    (Apache License v2) 2017 Matt Gumbley, DevZendo.org</description>
+    <url>http://www.devzendo.org/</url>
+
+    <organization>
+        <name>DevZendo.org</name>
+        <url>http://devzendo.org/</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://bitbucket.org/devzendo/scala-dependency-version-check</url>
+        <connection>scm:hg:https://bitbucket.org/devzendo/scala-dependency-version-check</connection>
+        <developerConnection>scm:hg:https://bitbucket.org/devzendo/scala-dependency-version-check</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>matt.gumbley</id>
+            <name>Matt Gumbley</name>
+            <email>matt.gumbley@devzendo.org</email>
+        </developer>
+    </developers>
+
+    <parent>
+        <groupId>org.devzendo</groupId>
+        <artifactId>group-parent-scala</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang.modules</groupId>
+            <artifactId>scala-xml_${scalaxml.scala.version}</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest_${scalatest.scala.version}</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- conversion of DataAccessExceptions to Validation to be done later
+        <dependency>
+            <groupId>org.scalaz</groupId>
+            <artifactId>scalaz-core_${scala.version}</artifactId>
+            <version>6.0.4</version>
+        </dependency>
+        -->
+
+        <dependency>
+            <groupId>org.scalacheck</groupId>
+            <artifactId>scalacheck_${scalacheck.scala.version}</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.devzendo</groupId>
+            <artifactId>scalacheck-contrib_${scalacheck.scala.version}</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.scala-lang.modules</groupId>
+            <artifactId>scala-parser-combinators_${parser.combinators.scala.version}</artifactId>
+        </dependency>
+    </dependencies>
+</project>
