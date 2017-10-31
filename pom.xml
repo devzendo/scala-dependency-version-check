@@ -79,4 +79,38 @@ minor version mismatches when upgrading versions in group-parent-scala.
             <artifactId>scala-parser-combinators_${parser.combinators.scala.version}</artifactId>
         </dependency>
     </dependencies>
+
+    <!-- scala-maven-plugin generates some meaningless warnings (in the context of this project since there's no code)
+         so disable these phases... -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>default-compile</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>default-package</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>doc-jar</goal>
+                        </goals>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
