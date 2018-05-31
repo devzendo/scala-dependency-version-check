@@ -7,7 +7,7 @@
     <packaging>pom</packaging>
     <description>Depends on our frequently-used Scala libraries, to show any
 minor version mismatches when upgrading versions in group-parent-scala.
-    (Apache License v2) 2017 Matt Gumbley, DevZendo.org</description>
+    (Apache License v2) 2018 Matt Gumbley, DevZendo.org</description>
     <url>http://www.devzendo.org/</url>
 
     <organization>
