@@ -24,9 +24,9 @@ minor version mismatches when upgrading versions in group-parent-scala.
     </licenses>
 
     <scm>
-        <url>https://bitbucket.org/devzendo/scala-dependency-version-check</url>
-        <connection>scm:hg:https://bitbucket.org/devzendo/scala-dependency-version-check</connection>
-        <developerConnection>scm:hg:https://bitbucket.org/devzendo/scala-dependency-version-check</developerConnection>
+        <url>https://github.com/devzendo/scala-dependency-version-check.git</url>
+        <connection>scm:git:https://github.com/devzendo/scala-dependency-version-check.git</connection>
+        <developerConnection>scm:git:git@github.com:devzendo/scala-dependency-version-check.git</developerConnection>
     </scm>
 
     <developers>
